@@ -11,7 +11,7 @@ public class BubbleSort {
     public static void ordenar(int[] array, Ordem ordem) {
         for (int i = 0; i < array.length - 1; i++) {
             boolean trocou = false;
-            for (int j = 0; j < array.length - 1; j++) {
+            for (int j = 0; j <  array.length - i - 1; j++) {
                 if (array[j] > array[j + 1] && ordem == Ordem.CRESCENTE || array[j] < array[j + 1] && ordem == Ordem.DECRESCENTE) {
                     ArrayUtils.swap(array, j, j + 1);
                         trocou = true;
