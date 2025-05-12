@@ -1,8 +1,7 @@
 package br.com.gomes.main;
 
 import br.com.gomes.service.*;
-
-import java.util.Arrays;
+import br.com.gomes.util.ArrayUtils;
 
 public class App {
     public static void main(String[] args) {
@@ -11,7 +10,9 @@ public class App {
 
     private static void ordenacoesCrescentes() {
         int[] array = {3, 4, 9, 2, 5, 8, 2, 1, 7};
-        BubbleSort.ordenar(array, BubbleSort.Ordem.CRESCENTE);
-        SelectionSort.ordenar(array);
+        ArrayUtils.printArray(BubbleSort.ordenar(array.clone(), BubbleSort.Ordem.CRESCENTE));
+        ArrayUtils.printArray(SelectionSort.ordenar(array.clone()));
+        ArrayUtils.printArray(InsertionSort.ordenar(array.clone()));
+        ArrayUtils.printArray(MergeSort.ordenar(array.clone()));
     }
 }

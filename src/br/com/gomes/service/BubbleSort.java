@@ -8,7 +8,7 @@ public class BubbleSort {
         DECRESCENTE
     }
 
-    public static void ordenar(int[] array, Ordem ordem) {
+    public static int[] ordenar(int[] array, Ordem ordem) {
         for (int i = 0; i < array.length - 1; i++) {
             boolean trocou = false;
             for (int j = 0; j <  array.length - i - 1; j++) {
@@ -19,6 +19,6 @@ public class BubbleSort {
             }
             if (!trocou) break;
         }
-        ArrayUtils.printArray(array);
+        return array;
     }
 }

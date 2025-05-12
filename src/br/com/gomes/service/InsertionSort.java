@@ -3,7 +3,7 @@ package br.com.gomes.service;
 import br.com.gomes.util.ArrayUtils;
 
 public class InsertionSort {
-    public static void ordenar(int[] array) {
+    public static int[] ordenar(int[] array) {
         for(int i = 1; i < array.length; i++) {
             int key = array[i];
             int j = i - 1;
@@ -13,6 +13,6 @@ public class InsertionSort {
             }
             array[j+1] = key;
         }
-        ArrayUtils.printArray(array);
+        return array;
     }
 }
