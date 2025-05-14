@@ -2,9 +2,11 @@ package br.com.gomes.util;
 
 public class ArrayUtils {
     public static void printArray(int[] array) {
+        System.out.print("[ ");
         for(int num : array) {
             System.out.print(num + " ");
         }
+        System.out.print("]");
         System.out.println();
     }
 
