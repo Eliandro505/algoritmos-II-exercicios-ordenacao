@@ -1,9 +1,12 @@
 package br.com.gomes.service;
 
-import br.com.gomes.util.ArrayUtils;
+import java.util.Scanner;
 
 public class InsertionSort {
+
     public static int[] ordenar(int[] array) {
+        System.out.printf("\nQuantos items do vetor quer ordenar? [0 para todos]: ");
+        int n = new Scanner(System.in).nextInt();
         for(int i = 1; i < array.length; i++) {
             int key = array[i];
             int j = i - 1;
@@ -12,6 +15,8 @@ public class InsertionSort {
                 j--;
             }
             array[j+1] = key;
+            if(n == 0) return array;
+            n--;
         }
         return array;
     }
