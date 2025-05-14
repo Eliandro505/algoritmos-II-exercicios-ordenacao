@@ -15,4 +15,17 @@ public class SelectionSort {
         }
         return array;
     }
+
+    public static String[] ordenar(String[] array) {
+        for(int i = 0; i < array.length; i++) {
+            int minIndex = i;
+            for(int j = i + 1; j < array.length; j++) {
+                if(array[minIndex].compareTo(array[j]) > 0) {
+                    minIndex = j;
+                }
+            }
+            ArrayUtils.swap(array, i, minIndex);
+        }
+        return array;
+    }
 }

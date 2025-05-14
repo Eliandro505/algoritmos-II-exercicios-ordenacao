@@ -7,6 +7,7 @@ public class App {
     public static void main(String[] args) {
 //        ordenacoesCrescentes();
         ordenacaoDecrescente();
+        ordenacaoArrayStrings();
     }
 
     private static void ordenacoesCrescentes() {
@@ -27,5 +28,13 @@ public class App {
         ArrayUtils.printArray(array);
         System.out.printf("Saída: ");
         ArrayUtils.printArray(BubbleSort.ordenar(array, BubbleSort.Ordem.DECRESCENTE));
+    }
+
+    private static void ordenacaoArrayStrings() {
+        String[] array = {"bbb", "aaa", "ccc"};
+        System.out.printf("Entrada: ");
+        ArrayUtils.printArray(array);
+        System.out.printf("Saída: ");
+        ArrayUtils.printArray(SelectionSort.ordenar(array));
     }
 }
