@@ -5,7 +5,8 @@ import br.com.gomes.util.ArrayUtils;
 
 public class App {
     public static void main(String[] args) {
-        ordenacoesCrescentes();
+//        ordenacoesCrescentes();
+        ordenacaoDecrescente();
     }
 
     private static void ordenacoesCrescentes() {
@@ -18,5 +19,13 @@ public class App {
         ArrayUtils.printArray(InsertionSort.ordenar(array.clone()));
         System.out.println("MergeSort");
         ArrayUtils.printArray(MergeSort.ordenar(array.clone()));
+    }
+
+    private static void ordenacaoDecrescente() {
+        int[] array = {3, 0, -2, 5, 8};
+        System.out.printf("Entrada: ");
+        ArrayUtils.printArray(array);
+        System.out.printf("Saída: ");
+        ArrayUtils.printArray(BubbleSort.ordenar(array, BubbleSort.Ordem.DECRESCENTE));
     }
 }
