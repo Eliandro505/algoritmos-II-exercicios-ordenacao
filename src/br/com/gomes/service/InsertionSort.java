@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class InsertionSort {
 
     public static int[] ordenar(int[] array) {
-        System.out.printf("\nQuantos items do vetor quer ordenar? [0 para todos]: ");
+        System.out.printf("Quantos items do vetor quer ordenar? [0 para todos]: ");
         int n = new Scanner(System.in).nextInt();
         for(int i = 1; i < array.length; i++) {
             int key = array[i];

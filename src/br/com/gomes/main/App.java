@@ -8,7 +8,8 @@ public class App {
 //        ordenacoesCrescentes();
 //        ordenacaoDecrescente();
 //        ordenacaoArrayStrings();
-        ordenacaoParcial();
+//        ordenacaoParcial();
+        ordenacaoMatrizes();
     }
 
     private static void ordenacoesCrescentes() {
@@ -25,25 +26,28 @@ public class App {
 
     private static void ordenacaoDecrescente() {
         int[] array = {3, 0, -2, 5, 8};
-        System.out.printf("Entrada: ");
-        ArrayUtils.printArray(array);
-        System.out.printf("Saída: ");
-        ArrayUtils.printArray(BubbleSort.ordenar(array, BubbleSort.Ordem.DECRESCENTE));
+        int[] arrayOrdenado = BubbleSort.ordenar(array, BubbleSort.Ordem.DECRESCENTE);
+        ArrayUtils.printEx(array, arrayOrdenado);
     }
 
     private static void ordenacaoArrayStrings() {
         String[] array = {"bbb", "aaa", "ccc"};
-        System.out.printf("Entrada: ");
-        ArrayUtils.printArray(array);
-        System.out.printf("Saída: ");
-        ArrayUtils.printArray(SelectionSort.ordenar(array));
+        String[] arrayOrdenado = SelectionSort.ordenar(array);
+        ArrayUtils.printEx(array, arrayOrdenado);
     }
 
     private static void ordenacaoParcial() {
         int[] array = {8, 4, 3, 7, 6, 5, 2};
-        System.out.printf("Entrada: ");
-        ArrayUtils.printArray(array);
-        System.out.printf("Saída: ");
-        ArrayUtils.printArray(InsertionSort.ordenar(array));
+        int[] arrayOrdenado = InsertionSort.ordenar(array);
+        ArrayUtils.printEx(array, arrayOrdenado);
+    }
+
+    private static void ordenacaoMatrizes() {
+        int[][] array = {{3, 2, 1}, {6, 5, 4}, {9, 8, 7}};
+        int[][] arrayOrganizado = {{3, 2, 1}, {6, 5, 4}, {9, 8, 7}};
+        for(int[] arrayInterno : arrayOrganizado) {
+            arrayInterno = SelectionSort.ordenar(arrayInterno);
+        }
+        ArrayUtils.printEx(array, arrayOrganizado);
     }
 }
